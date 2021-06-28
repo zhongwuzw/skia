@@ -1038,7 +1038,7 @@ optional("gpu") {
 }
 
 optional("gif") {
-  enabled = !skia_use_wuffs && skia_use_libgifcodec
+  enabled = false
   _libgifcodec_gni_path = "third_party/externals/libgifcodec/libgifcodec.gni"
   if ("True" ==
       exec_script("gn/checkpath.py",
@@ -1293,7 +1293,6 @@ skia_component("skia") {
     ":crc32",
     ":dehydrate_sksl",
     ":fontmgr_factory",
-    ":gif",
     ":heif",
     ":hsw",
     ":jpeg_decode",
